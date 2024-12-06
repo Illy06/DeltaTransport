@@ -1,88 +1,115 @@
-/* Stili principali per il sito Delta Trasport */
+/* Stili avanzati per il sito Delta Trasport */
 
+/* Generali */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background: linear-gradient(180deg, #f4f4f4, #e9ecef);
 }
 
 header {
-    background: #007BFF;
+    background: #004aad;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.container {
-    width: 85%;
-    margin: auto;
-    overflow: hidden;
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
+/* Hero Section */
 #hero {
-    background: #333;
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
     color: #fff;
-    padding: 2.5rem 0;
+    padding: 4rem 1rem;
     text-align: center;
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 #hero h2 {
-    margin: 0;
+    position: relative;
+    z-index: 2;
     font-size: 2.5rem;
-    font-weight: bold;
+    margin: 0;
 }
 
 #hero p {
-    margin: 1.5rem 0;
+    position: relative;
+    z-index: 2;
     font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
 }
 
 #hero .cta {
+    position: relative;
+    z-index: 2;
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #007BFF;
-    color: #fff;
+    padding: 0.8rem 1.5rem;
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background 0.3s;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
 #hero .cta:hover {
-    background: #0056b3;
+    background: #ffa500;
+    transform: scale(1.05);
 }
 
+/* Servizi */
 #servizi {
-    background: #fff;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     text-align: center;
+}
+
+#servizi h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #004aad;
 }
 
 .servizi-list {
@@ -93,89 +120,100 @@ nav ul li a {
 }
 
 .servizio {
-    background: #f9f9f9;
+    background: #fff;
     padding: 1.5rem;
-    margin: 1rem;
-    border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servizio img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.servizio h3 {
+    margin-top: 1rem;
+    color: #004aad;
+}
+
+.servizio p {
+    font-size: 0.95rem;
+    margin: 1rem 0;
 }
 
 .servizio:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.servizio h3 {
-    margin: 0 0 1rem;
-    color: #007BFF;
-    font-size: 1.5rem;
-}
-
+/* Chi siamo */
 #chi-siamo {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
+    background: #e9ecef;
     text-align: center;
-    background: #f4f4f4;
 }
 
-#chi-siamo p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    color: #555;
+#chi-siamo img {
+    max-width: 80%;
+    margin: 2rem 0;
+    border-radius: 10px;
 }
 
+/* Contatti */
 #contatti {
-    background: #333;
+    padding: 3rem 1rem;
+    background: #004aad;
     color: #fff;
-    padding: 3rem 0;
     text-align: center;
 }
 
 form {
-    margin-top: 1rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #007BFF;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    font-family: Arial, sans-serif;
 }
 
 form button {
-    padding: 0.75rem 1.5rem;
-    background: #007BFF;
+    padding: 0.8rem 1.5rem;
+    background: #004aad;
     color: #fff;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
 form button:hover {
-    background: #0056b3;
+    background: #002f6c;
+    transform: scale(1.05);
 }
 
+/* Footer */
 footer {
-    background: #007BFF;
+    background: #004aad;
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
-    font-size: 0.9rem;
+    margin-top: 2rem;
 }
